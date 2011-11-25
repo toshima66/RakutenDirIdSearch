@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>background - RakutenDirIdSearch</title>
+</head>
+<script type="text/javascript" charset="utf-8">
+// <![CDATA[
+	function copyToClipboard(text) {
+		var cobj = document.getElementById('clipboard_object');
+		cobj.value = text;
+		cobj.select();
+		document.execCommand("copy");
+	}
+
+	chrome.extension.onRequest.addListener(
+		function (request, sender, sendResponse) {
+			if ( request.command == 'setClipboard' ) {
+				copyToClipboard(request.data);
+			}
+		}
+	);
+// ]]>
+</script>
+<body>
+<textarea id="clipboard_object" />
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "RakutenDirIdSearch",
+  "version": "0.1",
+  "description": "rakuten directory id searcher.",
+  "browser_action": {
+    "default_icon": "48.png",
+    "default_title": "RakutenDirIdSearch",
+    "popup": "popup.html"
+  },
+  "background_page": "background.html",
+  "permissions": [
+    "http://ajax.googleapis.com/*",
+    "http://api.sixvox.cloudbees.net/*"
+  ],
+  "icons": {
+    "16" : "16.png",
+    "48" : "48.png",
+    "128": "128.png"
+  }
+}
